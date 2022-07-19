@@ -1,0 +1,38 @@
+//json data for collegeController:localhost:8080/colleges/
+{
+"c_id":1,"c_name":"Iet davv",
+ "students":[
+    {
+        "s_name":"arvind"
+    },
+     {
+        "s_name":"xyz"
+    },
+     {
+        "s_name":"abc"
+    }
+    ],
+    "employees":[
+    {
+        "emp_name":"empA"
+    },
+     {
+        "emp_name":"empB"
+    },
+     {
+        "emp_name":"empC"
+    }
+    ],
+    "faculties":[
+    {
+        "f_name":"facultyA"
+    },
+     {
+        "f_name":"facultyB"
+    },
+     {
+        "f_name":"facultyC"
+    }
+    ]
+}
+//similarly we can use another rest-api endpoints
