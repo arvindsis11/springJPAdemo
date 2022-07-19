@@ -9,17 +9,19 @@
 
 @ManyToOne(optional = false,cascade = CascadeType.ALL)\
 @JoinColumn(name = "c_id")#college_id\
-private University university;\
+private University university;
 
 ## Explanation:
 
-@ManyToOne indicates that Many student tuples can refer to one College tuple.\
-Also note that we have provided optional=false means this relationship becomes mandatory , no student row can be saved without a\ College tuple reference.\
-@JoinColumn says that there is a column c_id(i.e. college id) in Student table which will refer(foreign key) to primary key of the\ College table.\
-In this example only Student to College entity navigation is possible. Not viceversa.\
+1. @ManyToOne indicates that Many student tuples can refer to one College tuple.
+Also note that we have provided optional=false means this relationship becomes mandatory , no student row can be saved without a College tuple reference.
+
+
+@JoinColumn says that there is a column c_id(i.e. college id) in Student table which will refer(foreign key) to primary key of the College table.
+In this example only Student to College entity navigation is possible. Not viceversa.
 In practice, however, you are free to use query language to find all the student for a given College.\
 cascade = CascadeType.ALL indicates that, once we start any operation(CURD) on student table , it will reflects to College table.\
-Please refer to PostManSpecs.txt for more info.\
+Please refer to PostManSpecs.txt for more info.
 
 # other specifications:
 1. java version : 11
