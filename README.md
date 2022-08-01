@@ -32,3 +32,35 @@ Please refer to PostManSpecs.txt for more info.
 2. READ Operation: It reads table records based on the input parameter.
 3. UPDATE Operation: It executes an update statement on the table. It is based on the input parameter.
 4. DELETE Operation: It deletes a specified row in the table. It is also based on the input parameter.
+
+# SWAGGER CONFIGURATION:
+1. create Docket:
+```java
+ @Bean
+    public Docket swaggerConfiguration() {
+        return new Docket(DocumentationType.SWAGGER_2).select()
+                .apis(RequestHandlerSelectors.any()).build()
+                .apiInfo(metaData());
+
+    }
+```
+2. Add this dependencies to pom.xml:
+```xml
+<dependency>
+         <groupId>io.springfox</groupId>
+         <artifactId>springfox-swagger2</artifactId>
+         <version>2.6.1</version>
+         <scope>compile</scope>
+      </dependency>
+      <dependency>
+         <groupId>io.springfox</groupId>
+         <artifactId>springfox-swagger-ui</artifactId>
+         <version>2.6.1</version>
+         <scope>compile</scope>
+      </dependency>
+```
+note: use exact version. in case of any error add this line to application.properties:
+```properties
+spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
+```
+error might occure if you use swagger v3 or above because it doesn't supports matcher.
