@@ -63,4 +63,11 @@ note: use exact version. in case of any error add this line to application.prope
 ```properties
 spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
 ```
-error might occure if you use swagger v3 or above because it doesn't supports matcher.
+error might occure if you use swagger v3 or above because it doesn't supports matcher
+```xml
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL 
+
+\ [jar:file:/C:/Users/user/.m2/repository/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-
+
+3.0.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1;\ nested exception is
+```
